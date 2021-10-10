@@ -23,17 +23,22 @@ public class SPTV20Task4DaniilMozgov {
         //Загрузить код проекта на удаленный репозиторий Git.
         int[] nums;
         int avg = 0, sum = 0;
-        nums = new int[100];
+        nums = new int[10];
         Random random = new Random();
         int min = 0, max = 99;
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = random.nextInt(max-min+1);
+            nums[i] = random.nextInt(max-min+1)-min;
             
         }
+        Arrays.sort(nums);
         System.out.println("nums = "+Arrays.toString(nums));
+        int length;
+        length = nums.length;
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
             }
+        avg = sum/length;
+        System.out.println("Average = "+avg);
         System.out.println("");
         }
         }
